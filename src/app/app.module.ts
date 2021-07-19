@@ -13,6 +13,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { CreateMealComponent } from './Components/create-meal/create-meal.component';
 import { CreateReserveComponent } from './Components/create-reserve/create-reserve.component';
 import { ShowReserveComponent } from './Components/show-reserve/show-reserve.component';
+import { ChooseMealComponent } from './Components/choose-meal/choose-meal.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ShowReserveComponent } from './Components/show-reserve/show-reserve.com
     HomeComponent,
     CreateMealComponent,
     CreateReserveComponent,
-    ShowReserveComponent
+    ShowReserveComponent,
+    ChooseMealComponent
   ],
   imports: [
     BrowserModule,

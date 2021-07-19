@@ -53,7 +53,7 @@
           <li class="sidebar-dropdown">
             <a routerLink="/createmeal">
               <i class="fa fa-tachometer-alt"></i>
-              <span>Meal</span>
+              <span> Add New Meal</span>
               <!-- <span class="badge badge-pill badge-warning">New</span> -->
              </a>
             <div class="sidebar-submenu">
@@ -92,6 +92,165 @@
   <!-- sidebar-wrapper  -->
   <main class="page-content">
     <router-outlet></router-outlet>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+      body {
+          background-color: #eeeeee;
+          font-family: 'Open Sans', serif;
+          font-size: 14px
+      }
+
+      .container-fluid {
+          margin-top: 70px
+      }
+
+      .card-body {
+          -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+          padding: 1.40rem
+      }
+
+      .img-sm {
+          width: 80px;
+          height: 80px
+      }
+
+      .itemside .info {
+          padding-left: 15px;
+          padding-right: 7px
+      }
+
+      .table-shopping-cart .price-wrap {
+          line-height: 1.2
+      }
+
+      .table-shopping-cart .price {
+          font-weight: bold;
+          margin-right: 5px;
+          display: block
+      }
+
+      .text-muted {
+          color: #969696 !important
+      }
+
+      a {
+          text-decoration: none !important
+      }
+
+      .card {
+          position: relative;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          min-width: 0;
+          word-wrap: break-word;
+          background-color: #fff;
+          background-clip: border-box;
+          border: 1px solid rgba(0, 0, 0, .125);
+          border-radius: 0px
+      }
+
+      .itemside {
+          position: relative;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          width: 100%
+      }
+
+      .dlist-align {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex
+      }
+
+      [class*="dlist-"] {
+          margin-bottom: 5px
+      }
+
+      .coupon {
+          border-radius: 1px
+      }
+
+      .price {
+          font-weight: 600;
+          color: #212529
+      }
+
+      .btn.btn-out {
+          outline: 1px solid #fff;
+          outline-offset: -5px
+      }
+
+      .btn-main {
+          border-radius: 2px;
+          text-transform: capitalize;
+          font-size: 15px;
+          padding: 10px 19px;
+          cursor: pointer;
+          color: #fff;
+          width: 100%
+      }
+
+      .btn-light {
+          color: #ffffff;
+          background-color: #F44336;
+          border-color: #f8f9fa;
+          font-size: 12px
+      }
+
+      .btn-light:hover {
+          color: #ffffff;
+          background-color: #F44336;
+          border-color: #F44336
+      }
+
+      .btn-apply {
+          font-size: 11px
+      }
+  </style>
+    <div class="card">
+      <div class="table-responsive">
+          <table class="table table-borderless table-shopping-cart" >
+              <thead class="text-muted">
+                  <tr class="small text-uppercase">
+                      <th scope="col" width="150">Guest Name</th>
+                      <th scope="col" width="150">number of guests</th>
+                      <th scope="col" width="150">date</th>
+                      <th scope="col" width="150">special Requests</th>
+                      <th scope="col" class="text-right d-none d-md-block" width="200"></th>
+                  </tr>
+              </thead>
+
+              <tbody *ngFor="let reserve of reseves" >
+
+                  <tr>
+                     <div *ngFor="let user of users">
+                      <td *ngIf="user.userID==reserve.userID">
+                        {{user.userName}}
+                        
+                        </td>
+                     </div>
+                      <td >
+                          {{reserve.number_of_guests}}
+                      </td>
+                      <td > 
+                        {{reserve.date}}
+                      </td>
+                      <td> 
+                        {{reserve.special_requests}}
+                      </td>
+                      
+                  </tr>
+
+
+              </tbody>
+          </table>
+      </div>
+  </div>
       
   </main>
   <!-- page-content" -->

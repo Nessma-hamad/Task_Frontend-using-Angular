@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminPageComponent } from './Components/Admin/admin-page/admin-page.component';
 import { AdminRegisterComponent } from './Components/Admin/admin-register/admin-register.component';
+import { ChooseMealComponent } from './Components/choose-meal/choose-meal.component';
 import { CreateMealComponent } from './Components/create-meal/create-meal.component';
 import { CreateReserveComponent } from './Components/create-reserve/create-reserve.component';
 import { HomeComponent } from './Components/home/home.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'createmeal',component:CreateMealComponent},
   {path:'createreverve',component:CreateReserveComponent},
   {path:'showreverve',component:ShowReserveComponent},
+  {path:'completreserve',component:ChooseMealComponent},
   { path: "", redirectTo: "/home", pathMatch: "full" },
 
 ];

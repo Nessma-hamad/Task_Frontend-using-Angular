@@ -1,13 +1,13 @@
-import { Meal } from "./Meal";
+
 
 export class Reserve{
     constructor(
-        public  ID:number,
-        public  Number_of_guests :number,
-        public  Date :Date,
-        public  Special_requests :string,
-        public  UserID :string,
-        public  Meals:Meal[],
+        public  id:number,
+        public  number_of_guests :number,
+        public  date :Date,
+        public  special_requests :string,
+        public  userID :string,
+        
        
     ){}
 }

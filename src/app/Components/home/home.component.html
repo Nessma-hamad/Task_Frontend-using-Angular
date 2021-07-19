@@ -10,13 +10,11 @@
         <li><a routerLink="/home" >Home</a></li>
         <li *ngIf="!loggedIn"><a routerLink="/login">login</a></li>
         <li  *ngIf="loggedIn"><a (click)="LogOut()">logout</a></li>
-        <li><a routerLink="/register">register</a></li>
+        <li><a  *ngIf="!loggedIn"routerLink="/register">register</a></li>
        
         
     </ul>
-    <!-- <header>
-        <img src="./imges/1.jpg" height="500" width="1000"/>
-    </header> -->
+
     <section class="container">
         
         <h1 class="title">Welecome to our Restaurant</h1>

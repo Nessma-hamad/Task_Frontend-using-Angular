@@ -37,6 +37,12 @@ export class ReserveService {
       return throwError(err.message || "Internal Server error contact site adminstarator");
     }));
   }
+  getReserveByUSerId(userid: string): Observable<Reserve> {
+    let url = `http://localhost:47596/api/Reserve/GetReserveByUserID?userID=${userid}`;
+    return this.http.get<Reserve>(url).pipe(catchError((err) => {
+      return throwError(err.message || "Internal Server error contact site adminstarator");
+    }));
+  }
   updateReserve(id: number, reserveToUpdate: Reserve): Observable<Reserve>
    {
     const headers = {'content-type': 'application/json'}  
