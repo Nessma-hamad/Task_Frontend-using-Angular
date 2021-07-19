@@ -14,7 +14,7 @@ import { ReserveService } from 'src/app/Services/reserve.service';
 export class ChooseMealComponent implements OnInit {
 
   public meals:Meal[]=[];
-  public Usermeals:Meal[]=[];
+  public Usermeals:Meal[]=[]; 
   userID:string="";
   meal=new Meal(0,'',0);
   userReserve:Reserve={id:0,number_of_guests:0,date:new Date,special_requests:'',userID:''};

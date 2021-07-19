@@ -12,6 +12,7 @@ import { MealService } from 'src/app/Services/meal.service';
 export class CreateMealComponent implements OnInit {
 
   meal=new Meal(0,'',0);
+  public meals:Meal[]=[];
   
   
     constructor(private mealService:MealService,private router: Router) { }
@@ -19,7 +20,12 @@ export class CreateMealComponent implements OnInit {
     ngOnInit(): void {
     
      
-     
+      this.mealService.getAllMeals().subscribe(
+        data=>
+        {
+          this.meals=data;
+        }
+      )
      
     }
     
